@@ -12,6 +12,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "bridg": "^1.0.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -21,10 +22,11 @@
   "scripts": {
     "dev": "netlify dev",
     "start": "react-scripts start",
-    "build": "npx prisma generate && react-scripts build",
+    "build": "yarn generate && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "npx prisma generate"
+    "postinstall": "yarn generate",
+    "generate": "npx prisma generate && npm explore bridg -- \"node ./dist/generator/index.js ../../prisma/schema.prisma --outDir ./tmp --api /.netlify/functions/bridg && npm run build-client\""
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"

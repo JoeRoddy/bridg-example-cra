@@ -2949,6 +2949,13 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
+bridg@^1.0.23:
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/bridg/-/bridg-1.0.23.tgz#7c2744a8ec6a11bd9ad8bc015e4be9c66e88c1d1"
+  integrity sha512-Xxyy0ExAtKQdCxRdbzy9J5ThFpRQgQsAz+16DOXDQJvaRkFcvQjwz429XuiWpyb72EdDHHPLfyX0Y0QVIy/vhw==
+  dependencies:
+    strip-comments "^2.0.1"
+
 browser-process-hrtime@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz"
@@ -8358,7 +8365,7 @@ strip-bom@^4.0.0:
 
 strip-comments@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.npmjs.org/strip-comments/-/strip-comments-2.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/strip-comments/-/strip-comments-2.0.1.tgz#4ad11c3fbcac177a67a40ac224ca339ca1c1ba9b"
   integrity sha512-ZprKx+bBLXv067WTCALv8SSz5l2+XhpYCsVtSqlMnkAXMWDq+/ekVbl1ghqP9rUHTzv6sm/DwCOiYutU/yp1fw==
 
 strip-final-newline@^2.0.0:

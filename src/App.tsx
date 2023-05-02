@@ -1,7 +1,8 @@
 import { useAsync } from './hooks/useAsync';
+import db from 'bridg/app/client/db';
 
 function App() {
-  const [data] = useAsync(() => fetch(`/.netlify/functions/hello-world`).then((r) => r.json()));
+  const [data] = useAsync(() => db.user.findMany({ include: { blogs: true } }));
 
   return (
     <div>
