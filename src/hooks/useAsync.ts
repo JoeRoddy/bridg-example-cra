@@ -18,9 +18,8 @@ export const useAsync = <T extends (...args: any[]) => Promise<any>>(
 
       return res;
     })();
+    // eslint-disable-next-line
   }, dependencies);
 
   return [data, setData];
 };
-
-const x = () => {};
