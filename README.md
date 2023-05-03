@@ -2,6 +2,10 @@
 
 This repo is an example of Bridg being used in a serverless capacity, with a static client via create-react-app, and a single Netlify cloud function for handling requests from Bridg.
 
+Note: This could be used with any cloud function provider, it doesn't necessarily need to be Netlify.
+
+We just need a single function that can handle Bridg requests and to communicate with our database.
+
 ### Up and Running
 
 Set up project with Netlify:
