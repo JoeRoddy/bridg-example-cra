@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@netlify/functions": "^1.4.0",
-    "@prisma/client": "^4.13.0",
+    "@prisma/client": "^5.1.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -12,7 +12,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "bridg": "^1.0.23",
+    "bridg": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -26,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "yarn generate",
-    "generate": "npx prisma generate && npm explore bridg -- \"node ./dist/generator/index.js ../../prisma/schema.prisma --outDir ./tmp --api /.netlify/functions/bridg && npm run build-client\""
+    "generate": "npx prisma generate"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -50,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "prisma": "^4.13.0"
+    "prisma": "^5.1.1"
   }
 }

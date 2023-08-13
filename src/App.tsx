@@ -1,10 +1,10 @@
+import { Blog } from '@prisma/client';
+import bridg from 'bridg';
 import { useState } from 'react';
 import { useAsync } from './hooks/useAsync';
-import db from 'bridg/app/client/db';
-import { Blog } from '@prisma/client';
 
 function App() {
-  const [data] = useAsync(() => db.user.findMany({ include: { blogs: true } }));
+  const [data] = useAsync(() => bridg.user.findMany({ include: { blogs: true } }));
   const [searchResults, setSearchResults] = useState<Blog[]>([]);
 
   return (
@@ -14,7 +14,7 @@ function App() {
         onChange={async (e) => {
           const query = e.target.value;
           if (!query) return setSearchResults([]);
-          const blogs = await db.blog.findMany({ where: { title: { contains: query, mode: 'insensitive' } } });
+          const blogs = await bridg.blog.findMany({ where: { title: { contains: query, mode: 'insensitive' } } });
           setSearchResults(blogs);
         }}
       />

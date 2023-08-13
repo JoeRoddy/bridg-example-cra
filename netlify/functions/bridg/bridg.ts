@@ -1,6 +1,6 @@
 import { Handler } from '@netlify/functions';
 import { PrismaClient } from '@prisma/client';
-import { handleRequest } from 'bridg/app/server/request-handler';
+import { handleRequest } from 'bridg/server/request-handler';
 
 const prisma = new PrismaClient();
 
